@@ -14,6 +14,10 @@ $color-grey-dark-2: #6D5D4B;
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
+// RESPONSIVE BREAKPOINTS
+// 1200px / 16 which is standard size = 75
+$bp-largest: 75em;
+
 *,
 *::before,
 *::after {
@@ -25,6 +29,10 @@ $font-display: 'Josefin Sans', sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%; //This makes it so 1rem is exactly 10px. 16px is the browser default. so 10/16 = 62.5%
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
 }
 
 body {

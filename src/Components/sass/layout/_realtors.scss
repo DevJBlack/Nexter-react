@@ -9,12 +9,26 @@
   justify-items: center;
   grid-row-gap: 2rem;
 
+  @media only screen and (max-width: $bp-med) {
+    grid-column: full-start / full-end;
+  }
+
+
+
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;
     grid-column-gap: 2rem;
     grid-row-gap: 5vh;
     align-items: center;
+
+    @media only screen and (max-width: $bp-med) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &__img {
@@ -23,9 +37,6 @@
     display: block;
   }
 
-  &__details {
-
-  }
 
   &__sold {
     text-transform: uppercase;
